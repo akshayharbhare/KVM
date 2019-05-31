@@ -1,0 +1,11 @@
+---
+# tasks file for configuring_cent
+
+#- name: manage hostname
+#  include: hostname.yml
+
+- name: configuring kvm
+  include: kvm.yml
+
+#- name: restart server
+#  include: reboot.yml

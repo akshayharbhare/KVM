@@ -1,0 +1,19 @@
+---
+- name: setting hostname on node
+  hostname:
+    name: '{{ centos_hostname }}'
+
+- name: making entries of hosts in file
+  blockinfile:
+    path: /etc/hosts
+    block: |
+      {{ item.ip }} {{ item.name }} {{ item.fqdn }}
+    marker: "# {mark} ANSIBLE MANAGED BLOCK {{ item.name }}"
+  with_items:
+    - { name: '{{ centos_hostname }}', ip: '{{ centos_ip }}', fqdn: '{{ centos_fqdn }}' }
+    - { name: "localhost", ip: "127.0.0.1", fqdn: "" }
+
+- name: restarting hostnamectl service
+  service:
+    name: systemd-hostnamed
+    state: restarted

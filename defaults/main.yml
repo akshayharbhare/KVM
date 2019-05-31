@@ -1,0 +1,6 @@
+---
+# defaults file for configuring_cent
+
+centos_ip: "192.168.10.169"
+centos_hostname: "centos.pdcloudex.com"
+centos_fqdn: "centos"

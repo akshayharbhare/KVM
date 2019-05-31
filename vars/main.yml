@@ -1,0 +1,12 @@
+---
+# vars file for configuring_cent
+
+pkgs:
+- vim
+- qemu-kvm
+- virt-install
+- libvirt
+- libvirt-python
+- libguestfs
+- libguestfs-tools
+- qemu-img
