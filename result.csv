@@ -1,0 +1,10 @@
+Task,Server,Result
+Ensure HTTP server is not enabled , localhost , COMPLIANT
+Ensure access to the su command is restricted , localhost , NON-COMPLIANT
+Ensure cron is restricted to authorized users , localhost , NON-COMPLIANT
+Ensure at is restricted to authorized users , localhost , NON-COMPLIANT
+Ensure inactive password lock is 30 days or less , localhost , NON-COMPLIANT
+Ensure permissions on bootloader config are configured grub.cfg , localhost , NON-COMPLIANT
+Ensure permissions on bootloader config are configured user.cfg , localhost , NON-COMPLIANT
+Ensure core dumps are restricted limits.conf , localhost , NON-COMPLIANT
+Ensure core dumps are restricted sysctl.conf , localhost , NON-COMPLIANT
